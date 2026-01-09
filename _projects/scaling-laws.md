@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: project
 title: "Scaling Laws"
 slug: scaling-laws
@@ -15,4 +15,4 @@ Large language models store vast amounts of world knowledge in their parameters,
 ## Overview
 We study the interaction between pretraining scale and retrieval by training decoder-only language models of varying sizes on controlled splits of a fixed corpus. For each experiment, a fixed token budget is allocated between model pretraining and an external retrieval index, producing a family of pretrain–retrieval mixtures (e.g., 100% pretraining, 70/30 pretrain–retrieval, 30/70, etc.). Models are trained without retrieval and evaluated at test time using hybrid RAG pipelines built from the retrieval portion of the data. This setup allows us to directly measure how reallocating tokens from parametric learning to external memory affects downstream performance.
 
-We evaluate across a diverse set of tasks, including factual question answering, reasoning, and multi-hop knowledge tasks, and analyze performance as a function of model size and data allocation. Our goal is to identify “knee points” where additional pretraining yields diminishing returns and retrieval becomes more effective, as well as task-dependent differences in these transitions. By mapping these trade-offs, the project aims to inform more compute-efficient training strategies and provide empirical grounding for how knowledge should be distributed between model weights and external memory in large language systems.
+We evaluate across a diverse set of tasks, including factual question answering, reasoning, and multi-hop knowledge tasks, and analyze performance as a function of model size and data allocation. Our goal is to identify “knee points” where additional pretraining yields diminishing returns and retrieval becomes more effective, as well as task-dependent differences in these transitions. By mapping these trade-offs, the project aims to inform more compute-efficient training strategies and provide empirical grounding for how knowledge should be distributed between model weights and external memory in large language systems. -->
