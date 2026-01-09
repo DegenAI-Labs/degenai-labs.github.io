@@ -2,7 +2,7 @@
 title: Research
 permalink: /research/
 layout: page
-subtitle: "Evergreen project pages for ongoing and future work."
+subtitle: "Ongoing and future work."
 ---
 
 {% assign projects = site.projects | sort: "title" %}
