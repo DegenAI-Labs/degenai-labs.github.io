@@ -1,0 +1,6 @@
+- title: "A Unified Definition of Hallucination, Or: It's the World Model, Stupid"
+  year: 2025
+  authors: "Emmy Liu, Varun Gangal, Chelsea Zou, Xiaoqi Huang, Michael Yu, Alex Chang, Zhuofu Tao, Sachin Kumar, Steven Y. Feng"
+  arxiv: "https://arxiv.org/pdf/2512.21577"
+  projects: ["hallu-bench"]
+  status: "arXiv"

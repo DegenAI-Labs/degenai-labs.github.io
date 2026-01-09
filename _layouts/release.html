@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="release">
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="meta">
+            {% if page.artifact_type %}<span class="pill">{{ page.artifact_type }}</span>{% endif %}
+            {% if page.version %}<span class="muted">v{{ page.version }}</span>{% endif %}
+            {% if page.project %} · <span class="muted">project: <a href="/research/{{ page.project }}/">{{ page.project
+                    }}</a></span>{% endif %}
+            <br />
+            <time class="muted" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y"
+                }}</time>
+        </p>
+    </header>
+
+    {% if page.links and page.links.size > 0 %}
+    <div class="callouts">
+        {% for l in page.links %}
+        <a class="btn" href="{{ l.url }}">{{ l.name }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.sha256 and page.sha256 != "" %}
+    <p class="mono muted"><strong>sha256:</strong> {{ page.sha256 }}</p>
+    {% endif %}
+
+    <div class="page-content">
+        {{ content }}
+    </div>
+
+    <p class="backlink"><a href="/releases/">← Releases</a></p>
+</article>

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<article class="project">
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="meta">
+            {% if page.status %}<span class="pill">{{ page.status }}</span>{% endif %}
+            {% if page.since %}<span class="muted">since {{ page.since }}</span>{% endif %}
+            {% if page.tags and page.tags.size > 0 %}
+            ·
+            <span class="tags">
+                {% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+            </span>
+            {% endif %}
+        </p>
+    </header>
+
+    <div class="page-content">
+        {{ content }}
+    </div>
+
+    <hr class="sep" />
+
+    <section>
+        <h2>Associated papers</h2>
+        {% assign slug = page.slug %}
+        {% assign papers = site.data.papers | where_exp: "p", "p.projects contains slug" %}
+        {% if papers and papers.size > 0 %}
+        <ul class="list">
+            {% for p in papers %}
+            <li>
+                <a href="{{ p.arxiv }}">{{ p.title }}</a>
+                <span class="muted">({{ p.year }})</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">No papers listed yet for this project.</p>
+        {% endif %}
+    </section>
+
+    <section>
+        <h2>Associated releases</h2>
+        {% assign rels = site.releases | where: "project", slug | sort: "date" | reverse %}
+        {% if rels and rels.size > 0 %}
+        <ul class="list">
+            {% for r in rels %}
+            <li>
+                <a href="{{ r.url }}">{{ r.title }}</a>
+                {% if r.version %}<span class="muted">v{{ r.version }}</span>{% endif %}
+                <span class="muted">· {{ r.date | date: "%Y-%m-%d" }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">No releases listed yet for this project.</p>
+        {% endif %}
+    </section>
+
+    <p class="backlink"><a href="/research/">← Research</a></p>
+</article>
