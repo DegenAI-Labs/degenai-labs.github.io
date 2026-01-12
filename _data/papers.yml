@@ -1,6 +1,28 @@
 - title: "A Unified Definition of Hallucination, Or: It's the World Model, Stupid"
-  year: 2025
   authors: "Emmy Liu, Varun Gangal, Chelsea Zou, Xiaoqi Huang, Michael Yu, Alex Chang, Zhuofu Tao, Sachin Kumar, Steven Y. Feng"
   arxiv: "https://arxiv.org/pdf/2512.21577"
   projects: ["hallu-bench"]
   status: "arXiv"
+  year: 2025
+  date: "2025-12-04"
+  abstract: "Despite numerous attempts to solve the issue of hallucination since the inception
+    of neural language models, it remains a problem in even frontier large language
+    models today. Why is this the case? We walk through definitions of hallucination
+    used in the literature from a historical perspective up to the current day, and fold
+    them into a single definition of hallucination, wherein different prior definitions
+    focus on different aspects of our definition. At its core, we argue that hallucination
+    is simply inaccurate (internal) world modeling, in a form where it is observable to
+    the user (e.g., stating a fact which contradicts a knowledge base, or producing a
+    summary which contradicts a known source). By varying the reference world model
+    as well as the knowledge conflict policy (e.g., knowledge base vs. in-context), we
+    arrive at the different existing definitions of hallucination present in the literature.
+    We argue that this unified view is useful because it forces evaluations to make
+    clear their assumed “world” or source of truth, clarifies what should and should
+    not be called hallucination (as opposed to planning or reward/incentive-related
+    errors), and provides a common language to compare benchmarks and mitigation
+    techniques. Building on this definition, we outline plans for a family of benchmarks
+    in which hallucinations are defined as mismatches with synthetic but fully specified
+    world models in different environments, and sketch out how these benchmarks can
+    use such settings to stress-test and improve the world modeling components of
+    language models."
+
