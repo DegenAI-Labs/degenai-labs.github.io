@@ -277,3 +277,21 @@ a:hover {
         --max: 1260px;
     }
 }
+
+.paper-abstract-text {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.65;
+}
+
+.paper-authors{
+    margin-top: 2px;
+    font-size: 0.85em;
+    line-height: 1.45;
+}
+
+.paper-meta {
+    margin-top: 2px;
+    font-size: 0.85em;
+    line-height: 1.45;
+}
